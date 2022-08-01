@@ -8,11 +8,11 @@ public class HelloWorld {
         long t1, t2, t3;
         t1 = System.nanoTime();
         for (int i = 0; i < 10000000; i++) {
-            fib(12);
+            fib(11);
         }
         t2 = System.nanoTime();
         for (int i = 0; i < 10000000; i++) {
-            fib1(12);
+            fib1(11);
         }
         t3 = System.nanoTime();
         System.out.println("Running time = " + ((t2 - t1) / 1000000) + "ms");
@@ -20,8 +20,7 @@ public class HelloWorld {
 
     }
     public static long fib(long n) {
-        // đệ quy
-// TODO: Calculate Fibonacci value for the given number
+        // đệ quy tốn thời gian -> ko nên dùng
         if (n <= 0) {
             return 0;
         } else if (n == 1) {
@@ -32,8 +31,7 @@ public class HelloWorld {
     }
 
     public static long fib1(long n) {
-        //vòng lặp
-// TODO: Calculate Fibonacci value for the given number
+        //vòng lặp nên dùng
         long prefib = 0;
         long fib = 1;
         if (n <= 1) fib = n;

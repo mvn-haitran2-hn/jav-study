@@ -77,7 +77,7 @@ public class Bai4 {
 }
 
 interface INews {
-    public default void display() {
+    default void display() {
     }
 }
 

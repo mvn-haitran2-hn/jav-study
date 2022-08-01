@@ -2,16 +2,16 @@ package bai2;
 
 public  class Bai2 {
     public static void main(String[] args){
-        Square hinhvuong = new Square(5);
-        Rectangle hinhchunhat = new Rectangle(4, 5);
-        hinhvuong.get_edge();
-        hinhvuong.perimeter();
-        hinhvuong.area();
-        hinhvuong.all();
-        hinhchunhat.get_edge();
-        hinhchunhat.perimeter();
-        hinhchunhat.area();
-        hinhchunhat.all();
+        Square hinhVuong = new Square(5);
+        Rectangle hinhChuNhat = new Rectangle(4, 5);
+        hinhVuong.getEdge();
+        hinhVuong.perimeter();
+        hinhVuong.area();
+        hinhVuong.all();
+        hinhChuNhat.getEdge();
+        hinhChuNhat.perimeter();
+        hinhChuNhat.area();
+        hinhChuNhat.all();
     }
 }
 class Square {
@@ -21,7 +21,7 @@ class Square {
         this.edge = edge;
     }
 
-    public void get_edge() {
+    public void getEdge() {
         System.out.println("Chiều dài cạnh hình vuông là:" + this.edge);
     }
     public float perimeter(){
@@ -35,7 +35,7 @@ class Square {
         return area;
     }
     public void all(){
-        get_edge();
+        getEdge();
         perimeter();
         area();
     }
@@ -47,7 +47,7 @@ class Rectangle {
         this.edge1 = edge1;
         this.edge2 = edge2;
     }
-    public void get_edge() {
+    public void getEdge() {
         System.out.println("Chiều dài 2 cạnh hình chữ nhật là: " + this.edge1 + " và " + this.edge2);
     }
     public float perimeter(){
@@ -61,7 +61,7 @@ class Rectangle {
         return area;
     }
     public void all(){
-        get_edge();
+        getEdge();
         perimeter();
         area();
     }
