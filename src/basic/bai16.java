@@ -13,19 +13,19 @@ public class bai16 {
         System.out.println("Nhập ký tự");
         char kyTu = in.next().charAt(0);
 
-        if (check(chuoi, kyTu)) {
+        if (chuoi.indexOf(kyTu) < 0) {
             System.out.println("Có");
         } else {
             System.out.println("Không");
         }
     }
 
-    private static boolean check(String chuoi, char kyTu) {
-        for (int i = 0; i < chuoi.length(); i++) {
-            if (kyTu == chuoi.charAt(i)) {
-                return true;
-            }
-        }
-        return false;
-    }
+//    private static boolean check(String chuoi, char kyTu) {
+//        for (int i = 0; i < chuoi.length(); i++) {
+//            if (kyTu == chuoi.charAt(i)) {
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
 }

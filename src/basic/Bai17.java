@@ -16,7 +16,7 @@ public class Bai17 {
         String chuoi = in.next();
         System.out.println("Nhập ký tự");
         char kyTu = in.next().charAt(0);
-        int thuTu = at(chuoi, kyTu);
+        int thuTu = chuoi.indexOf(kyTu);
         if (thuTu == -1) {
             System.out.println("Không tồn tại trong chuỗi");
         } else {
@@ -24,12 +24,12 @@ public class Bai17 {
         }
     }
 
-    private static int at(String chuoi, char kyTu) {
-        for (int i = 0; i < chuoi.length(); i++) {
-            if (kyTu == chuoi.charAt(i)) {
-                return i;
-            }
-        }
-        return -1;
-    }
+//    private static int at(String chuoi, char kyTu) {
+//        for (int i = 0; i < chuoi.length(); i++) {
+//            if (kyTu == chuoi.charAt(i)) {
+//                return i;
+//            }
+//        }
+//        return -1;
+//    }
 }

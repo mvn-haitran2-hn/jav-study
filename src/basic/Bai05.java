@@ -23,14 +23,18 @@ public class Bai05 {
     }
 
     private static boolean check(String maSo) {
-        if (maSo.length() != 8 || maSo.charAt(0) != 'B') {
-            return false;
+//        if (maSo.length() != 8 || maSo.charAt(0) != 'B') {
+//            return false;
+//        }
+//        for (int i = 1; i < 8; i++) {
+//            if (maSo.codePointAt(i) < 49 || maSo.codePointAt(i) > 57) {
+//                return false;
+//            }
+//        }
+//        return true;
+        if (maSo.matches("^B[1-9]{7}")) {
+            return true;
         }
-        for (int i = 1; i < 8; i++) {
-            if (maSo.codePointAt(i) < 49 || maSo.codePointAt(i) > 57) {
-                return false;
-            }
-        }
-        return true;
+        return false;
     }
 }

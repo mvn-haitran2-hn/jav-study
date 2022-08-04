@@ -14,6 +14,5 @@ public class Bai10 {
                 System.out.println("Sai định dạng");
             }
         }
-
     }
 }

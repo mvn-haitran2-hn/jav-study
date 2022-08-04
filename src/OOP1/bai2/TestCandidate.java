@@ -18,9 +18,9 @@ public class TestCandidate {
             System.out.println("Nhập thông tin thí sinh thứ " + i);
             list[i] = new Candidate(in.next(), in.next(), in.next(), in.nextInt(), in.nextInt(), in.nextInt());
         }
-        for (Candidate canđiate : list) {
-            if (canđiate.tongDiem() > 1) {
-                canđiate.display();
+        for (Candidate candidate : list) {
+            if (candidate.tongDiem() > 1) {
+                candidate.display();
             }
         }
     }

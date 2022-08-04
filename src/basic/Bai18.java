@@ -18,5 +18,4 @@ public class Bai18 {
             System.out.println("Không");
         }
     }
-
 }

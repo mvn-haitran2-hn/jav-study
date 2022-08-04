@@ -113,20 +113,19 @@ public class bai3 {
         System.out.println("Nhập id sv cần sửa");
         int id = in.nextInt();
 
-        System.out.println("Nhập name");
-        String name = in.next();
-        System.out.println("Nhập age");
-        int age = in.nextInt();
-        System.out.println("Nhập  date");
-        String date = in.next();
-        System.out.println("Nhập gpa");
-        float gpa = in.nextFloat();
-
         SinhVien sv = new SinhVien(id, name, age, date, gpa);
 
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getId() == id) {
-                list.set(i, sv);
+            SinhVien sv = list.get(i);
+            if (sv.getId() == id) {
+                System.out.println("Nhập name");
+                sv.setName(in.next());
+                System.out.println("Nhập age");
+                sv.setAge(in.nextInt());
+                System.out.println("Nhập  address");
+                sv.setAddress(in.next());
+                System.out.println("Nhập gpa");
+                sv.setGpa(in.nextFloat());
             }
         }
     }

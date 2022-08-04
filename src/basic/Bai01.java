@@ -17,6 +17,5 @@ public class Bai01 {
         } else {
             System.out.println("Đây là số nguyên âm");
         }
-
     }
 }
