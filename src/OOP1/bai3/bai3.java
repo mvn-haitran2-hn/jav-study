@@ -1,9 +1,7 @@
 package OOP1.bai3;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class bai3 {
     public static void main(String[] args) {
@@ -29,10 +27,12 @@ public class bai3 {
                     delById(list);
                     break;
                 case 4:
-                    list = sortGpa(list);
+//                    list = sortGpa(list);
+                    Collections.sort(list, (o1, o2) -> o1.getGpa().compareTo(o2.getGpa()));
                     break;
                 case 5:
-                    list = sortName(list);
+//                    list = sortName(list);
+                    Collections.sort(list, (o1, o2) -> o1.getName().compareTo(o2.getName()));
                     break;
                 case 6:
                     show(list);
@@ -112,8 +112,6 @@ public class bai3 {
         Scanner in = new Scanner(System.in);
         System.out.println("Nhập id sv cần sửa");
         int id = in.nextInt();
-
-        SinhVien sv = new SinhVien(id, name, age, date, gpa);
 
         for (int i = 0; i < list.size(); i++) {
             SinhVien sv = list.get(i);

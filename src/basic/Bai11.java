@@ -15,7 +15,7 @@ public class Bai11 {
         int sum = 0;
         for (int i = 0; i < n; i++) {
             integer[i] = in.nextInt();
-            sum = sum + integer[i];
+            sum += integer[i];
         }
         float average = (float) sum / n;
         System.out.println("Trung bình cộng của" + n + " số nguyên là; " + average);

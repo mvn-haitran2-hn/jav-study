@@ -10,7 +10,7 @@ public class Bai06 {
         int n = -1;
         do {
             n = in.nextInt();
-        } while (n <= 0);
+        } while (n < 0);
         int sum = 0;
         for (int i = 0; i <= n; i += 2) {
             sum = sum + i;

@@ -11,12 +11,13 @@ public class Bai19 {
         Scanner in = new Scanner(System.in);
         System.out.println("Nhập chuỗi");
         String chuoi = in.next();
-        int soLan = chuoi.length() - chuoi.replaceAll("a", "").length();
-//        for (int i = 0; i < chuoi.length(); i++) {
-//            if (chuoi.charAt(i) == 'a') {
-//                soLan++;
-//            }
-//        }
+        int soLan = 0;
+        for (int i = 0; i < chuoi.length(); i++) {
+            System.out.println(chuoi.charAt(i));
+            if (chuoi.charAt(i) == 'a') {
+                soLan++;
+            }
+        }
         System.out.println("Số lần xuất hiện ký tự a là: " + soLan);
     }
 }
