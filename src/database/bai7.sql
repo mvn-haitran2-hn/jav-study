@@ -8,9 +8,11 @@ CREATE TABLE answers (
 INSERT INTO answers (correct_answer,given_answer)
 VALUES ('a','a'),('b',''),('c','b');
 
-SELECT id, 'no_answer' AS checks FROM answers WHERE given_answer = ''
-UNION
-SELECT id, 'correct' AS checks FROM answers WHERE given_answer = correct_answer
-UNION
-SELECT id, 'incorrect' AS checks FROM answers WHERE given_answer != correct_answer AND given_answer != ''
-ORDER by id;
+SELECT id,(
+	CASE
+		WHEN given_answer = '' THEN 'no_answer'
+		WHEN given_answer = correct_answer THEN 'correct'
+		WHEN given_answer != correct_answer THEN 'incorrect'
+	END) AS checks
+FROM answers
+ORDER BY id;

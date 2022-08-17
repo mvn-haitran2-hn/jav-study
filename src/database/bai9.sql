@@ -31,9 +31,9 @@ VALUES ('The Daily Reporter','Lavelle Phu'),
 		('Nova Daily','Joya Buss');
 
 
-SELECT subscriber FROM full_year
-WHERE newspayper LIKE '%Daily%'
-UNION
-SELECT subscriber FROM half_year
-WHERE newspayper LIKE '%Daily%'
+SELECT * SELECT (SELECT subscriber FROM full_year
+    WHERE newspayper LIKE '%Daily%'
+    UNION
+    SELECT subscriber FROM half_year
+    WHERE newspayper LIKE '%Daily%') AS year
 ORDER BY subscriber ASC;

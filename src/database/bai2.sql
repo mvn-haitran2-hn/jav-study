@@ -19,5 +19,4 @@ VALUES (1,'Hai',10,4),
 		(10,'Hai10',32,3);
 
  SELECT username FROM product
- WHERE price*quantity = (SELECT MAX(price*quantity) FROM product)
- ORDER BY username ASC;
+ ORDER BY price * quantity DESC, username ASC LIMIT 1

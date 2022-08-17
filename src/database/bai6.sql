@@ -20,4 +20,4 @@ VALUES ('Mikel','Cover','%Mikel_Cover%'),
         ('Julietta','Beer','Tn35g5h51u7ltW946J');
 
 SELECT * FROM users
-WHERE attribute LIKE concat('%', first_name, '_', second_name, '%');
+WHERE attribute LIKE concat('%', first_name, '\_', second_name, '%');

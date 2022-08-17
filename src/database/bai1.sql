@@ -5,7 +5,7 @@ CREATE TABLE user (
     email varchar(255)
  );
 
-INSERT INTO user (id, usernam, role, email)
+INSERT INTO user (id, username, role, email)
 VALUES (1,'Hai','premium','1@role.com'),
 		(2,'Hai2','regular','2@role.com'),
 		(3,'Hai3','guru','3@role.com'),
@@ -17,5 +17,5 @@ VALUES (1,'Hai','premium','1@role.com'),
 		(9,'Hai9','premium','9@role.com');
 
 Select email From user
-WHERE lower(role)!='premium' AND lower(role) != 'admin'
+WHERE role!='premium' AND role != 'admin'
 ORDER BY email ASC;
