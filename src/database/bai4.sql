@@ -1,6 +1,6 @@
 CREATE TABLE Grades (
     Name varchar(255),
-    ID BIGINT(5) UNSIGNED NOT NULL,
+    ID INT UNSIGNED NOT NULL,
     Midterm1 TINYINT UNSIGNED,
     CHECK (Midterm1 between 0 and 100),
     Midterm2 TINYINT UNSIGNED,
